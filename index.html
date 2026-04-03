@@ -1,0 +1,3016 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="I Build Websites That Grow Your Business Online. Affordable, modern, and high-converting websites for local businesses and startups.">
+    <meta name="keywords" content="website developer in India, affordable website design, business website, local business website, web developer for small business, Sushant Agnihotri">
+    <meta name="author" content="Sushant Agnihotri">
+    <title>Sushant Agnihotri - Website Developer | Business Websites for Local Business</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6C63FF;
+            --secondary: #FF4D8D;
+            --accent: #FF8A00;
+            --dark: #1A1A2E;
+            --light: #F8F9FB;
+            --lighter: #FFFFFF;
+            --grey-300: #E8EEF5;
+            --grey-600: #718096;
+            --text-dark: #1A202C;
+            --text-light: #718096;
+            --glass-bg: rgba(255, 255, 255, 0.75);
+            --glass-border: rgba(255, 255, 255, 0.25);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.15);
+            --shadow-xl: 0 20px 60px rgba(108, 99, 255, 0.2);
+            --gradient-primary: linear-gradient(135deg, #6C63FF, #D946EF);
+            --gradient-secondary: linear-gradient(135deg, #FF4D8D, #FF8A00);
+            --gradient-accent: linear-gradient(135deg, #D946EF, #FF4D8D);
+            --border-light: #E8EEF5;
+            --lighter-bg: #FFFFFF;
+            --text-primary: #1A202C;
+            --text-secondary: #718096;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', 'Inter', sans-serif;
+            color: var(--text-dark);
+            background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 50%, #EFF2FF 100%);
+            padding: 70px 40px 60px;
+            position: relative;
+            overflow: hidden;
+            min-height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            right: -80px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 450px;
+            height: 450px;
+            background-image: url('logo/WhatsApp Image 2026-04-03 at 12.06.05.jpeg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.07;
+            pointer-events: none;
+            filter: blur(2px);
+            animation: float 35s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 77, 141, 0.08), transparent 70%);
+            border-radius: 50%;
+            filter: blur(40px);
+            animation: float 25s ease-in-out infinite reverse;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(108, 99, 255, 0.15), transparent 70%);
+            border-radius: 50%;
+            filter: blur(40px);
+            animation: float 20s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -5%;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(255, 77, 141, 0.12), transparent 70%);
+            border-radius: 50%;
+            filter: blur(40px);
+            animation: float 25s ease-in-out infinite reverse;
+            pointer-events: none;
+        }
+
+        /* ===== LOADING ANIMATION ===== */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--lighter);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            animation: fadeOut 0.6s ease-in-out 2s forwards;
+        }
+
+        .loader-content {
+            text-align: center;
+        }
+
+        .loader-logo {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            animation: bounce 1.5s ease-in-out infinite;
+        }
+
+        .loader-logo svg {
+            width: 100%;
+            height: 100%;
+            filter: none;
+        }
+
+        .loader-text {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            33% { transform: translateY(-20px) translateX(10px); }
+            66% { transform: translateY(20px) translateX(-10px); }
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeOut {
+            to { opacity: 0; visibility: hidden; }
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+            animation: slideDown 0.5s ease;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(108, 99, 255, 0.03), rgba(255, 77, 141, 0.03));
+            pointer-events: none;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .header-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 12px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 800;
+            font-size: 18px;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            letter-spacing: -0.5px;
+            height: 40px;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+            letter-spacing: -0.3px;
+        }
+
+        .logo::after {
+            display: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+            font-size: 20px;
+            animation: none;
+            box-shadow: 0 8px 20px rgba(108, 99, 255, 0.3);
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+
+        .logo-icon:hover {
+            transform: rotate(5deg) scale(1.1);
+            box-shadow: 0 12px 30px rgba(108, 99, 255, 0.4);
+        }
+
+        .header-logo-img {
+            display: block;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            object-fit: contain;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover .header-logo-img {
+            transform: scale(1.08) rotate(2deg);
+        }
+
+        .header-art {
+            display: none;
+        }
+
+        .header-status {
+            display: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 600;
+            font-size: 14px;
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-secondary);
+            transition: width 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+
+        nav a:hover {
+            color: var(--text-dark);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a.active {
+            color: var(--primary);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav a.active::after {
+            width: 100%;
+            background: var(--gradient-primary);
+        }
+
+        .cta-btn {
+            background: var(--gradient-secondary);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 13px;
+            padding: 10px 24px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+            box-shadow: 0 6px 18px rgba(255, 77, 141, 0.3);
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255, 77, 141, 0.4);
+        }
+
+        .cta-btn:hover::before {
+            transform: translateX(100%);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+
+        /* ===== HERO CONTENT ===== */
+        .hero-content {
+            text-align: center;
+            max-width: 650px;
+            position: relative;
+            z-index: 3;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--text-dark) 0%, var(--primary) 40%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -1px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero p {
+            font-size: 17px;
+            color: var(--text-light);
+            margin-bottom: 28px;
+            font-weight: 400;
+            line-height: 1.7;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .typewriter-text {
+            position: relative;
+            min-height: 24px;
+            font-weight: 700;
+            background: var(--gradient-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 0.5px;
+        }
+
+        .typewriter-text::after {
+            display: none;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+
+        .primary-btn {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 12px 32px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+            box-shadow: 0 6px 20px rgba(108, 99, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .primary-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
+
+        .primary-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(108, 99, 255, 0.5);
+        }
+
+        .primary-btn:hover::before {
+            transform: translateX(100%);
+        }
+
+        .secondary-btn {
+            background: transparent;
+            color: var(--primary);
+            padding: 12px 32px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            border: 2px solid var(--primary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .secondary-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-primary);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .secondary-btn:hover {
+            color: white;
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(108, 99, 255, 0.2);
+        }
+
+        .secondary-btn:hover::before {
+            opacity: 1;
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about {
+            padding: 80px 40px;
+            max-width: 1300px;
+            margin: 0 auto;
+            background: var(--lighter);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .section-header h2 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, var(--text-dark) 0%, var(--primary) 50%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -1px;
+        } 
+
+        .section-header p {
+            font-size: 16px;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 26px;
+            margin-bottom: 16px;
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        .about-text p {
+            font-size: 15px;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .stat-box {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            border: 1px solid var(--grey-300);
+        }
+
+        .stat-box:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .about-image {
+            position: relative;
+            height: 380px;
+        }
+
+        .about-image::before {
+            display: none;
+        }
+
+        .about-image svg {
+            width: 100%;
+            height: 100%;
+            filter: none;
+            opacity: 0.7;
+        }
+
+        /* ===== SERVICES SECTION ===== */
+        .services {
+            padding: 80px 40px;
+            background: var(--light);
+        }
+
+        .services-container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 18px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+            border: 1px solid var(--glass-border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(108, 99, 255, 0.05), rgba(255, 77, 141, 0.05));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 16px 40px rgba(108, 99, 255, 0.18);
+            background: rgba(255, 255, 255, 0.88);
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            margin-bottom: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 16px rgba(108, 99, 255, 0.2);
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.12) rotate(4deg);
+            box-shadow: 0 10px 25px rgba(108, 99, 255, 0.35);
+        }
+
+        .service-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        /* ===== CATEGORIES SECTION ===== */
+        .categories {
+            padding: 80px 40px;
+            max-width: 1300px;
+            margin: 0 auto;
+            background: var(--lighter);
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 50px;
+        }
+
+        .category-card {
+            background: var(--light);
+            padding: 24px;
+            border-radius: 14px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            border: 1px solid var(--grey-300);
+        }
+
+        .category-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px) scale(1.02);
+            background: var(--lighter);
+        }
+
+        .category-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .category-card h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        .category-card p {
+            font-size: 13px;
+            color: var(--text-light);
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        /* ===== PORTFOLIO SECTION ===== */
+        .portfolio {
+            padding: 120px 40px;
+            background: var(--light);
+        }
+
+        .portfolio-container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 60px;
+        }
+
+        .portfolio-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+            border: 1px solid var(--glass-border);
+            position: relative;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 16px 40px rgba(108, 99, 255, 0.18);
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 180px;
+            background: var(--gradient-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-card:hover .portfolio-image {
+            transform: scale(1.05);
+        }
+
+        .portfolio-content {
+            padding: 22px;
+        }
+
+        .portfolio-content h3 {
+            font-size: 17px;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+
+        .portfolio-content p {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .portfolio-tag {
+            display: inline-block;
+            background: var(--light);
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 8px;
+            border: 1px solid var(--grey-300);
+        }
+
+        /* ===== WHY CHOOSE SECTION ===== */
+        .why-choose {
+            padding: 80px 40px;
+            max-width: 1300px;
+            margin: 0 auto;
+            background: var(--lighter);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .why-features {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 16px;
+            padding: 18px;
+            background: var(--light);
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            border: 1px solid var(--grey-300);
+        }
+
+        .feature-item:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateX(4px) scale(1.01);
+        }
+
+        .feature-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--light);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .feature-text h4 {
+            font-size: 15px;
+            margin-bottom: 4px;
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        .feature-text p {
+            font-size: 13px;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        .why-image {
+            text-align: center;
+        }
+
+        .why-image svg {
+            width: 100%;
+            max-width: 400px;
+            filter: drop-shadow(var(--shadow));
+        }
+
+        /* ===== TESTIMONIALS SECTION ===== */
+        .testimonials {
+            padding: 120px 40px;
+            background: var(--lighter);
+        }
+
+        .testimonials-container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 60px;
+        }
+
+        .testimonial-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            padding: 32px;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+            border: 1px solid var(--glass-border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-secondary);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(108, 99, 255, 0.15);
+            background: rgba(255, 255, 255, 0.85);
+        }
+
+        .testimonial-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .stars {
+            margin-bottom: 15px;
+            color: #fbbf24;
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            font-size: 15px;
+            color: var(--text-light);
+            margin-bottom: 24px;
+            line-height: 1.9;
+            font-weight: 400;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--gradient-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .author-info h4 {
+            font-size: 15px;
+            margin-bottom: 3px;
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        .author-info p {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact {
+            padding: 120px 40px;
+            background: var(--light);
+            color: var(--text-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .contact-header h2 {
+            font-size: 44px;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        .contact-header p {
+            font-size: 16px;
+            color: var(--text-light);
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .contact-item {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 28px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover {
+            box-shadow: 0 20px 50px rgba(108, 99, 255, 0.15);
+            transform: translateY(-6px);
+            background: rgba(255, 255, 255, 0.85);
+        }
+
+        .contact-item:hover::before {
+            transform: scaleX(1);
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient-secondary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover .contact-icon {
+            transform: scale(1.1) rotate(-4deg);
+        }
+
+        .contact-item h3 {
+            margin: 0 0 6px;
+            font-size: 17px;
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        .contact-item p, .contact-item a {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        .contact-map {
+            grid-column: 1 / -1;
+            height: 300px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--grey-300);
+            background: var(--grey-300);
+            margin-top: 30px;
+        }
+
+        .contact-form {
+            background: var(--lighter);
+            border: 1px solid var(--grey-300);
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .contact-form h3 {
+            color: var(--text-dark);
+            font-size: 20px;
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            background: var(--light);
+            border: 1px solid var(--grey-300);
+            color: var(--text-dark);
+        }
+
+        .form-submit {
+            background: var(--primary);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .contact-header h2 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .contact-header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contact-map {
+            grid-column: 1 / -1;
+            height: 300px;
+            border-radius: 14px;
+            overflow: hidden;
+            margin-top: 30px;
+            box-shadow: 0 12px 28px rgba(95, 43, 131, 0.2);
+            border: 1px solid rgba(149, 80, 158, 0.2);
+        }
+
+        .contact-map iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .contact-block {
+            color: white;
+            font-size: 15px;
+            line-height: 1.5;
+            margin-top: 8px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 14px;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-icon {
+            width: 52px;
+            height: 52px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover .contact-icon {
+            transform: scale(1.12) rotate(5deg);
+        }
+
+        .contact-item h3 {
+            font-size: 16px;
+            margin-bottom: 6px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .contact-item p {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        .contact-item a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary);
+        }
+
+        /* Deprecated contact-form styles - removed (now using updated minimal styles above) */
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-dark);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 16px 18px;
+            border: 2px solid var(--border-light);
+            background: var(--lighter-bg);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--text-secondary);
+            opacity: 0.7;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            background: var(--lighter-bg);
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(108, 99, 255, 0.15), 0 8px 24px rgba(108, 99, 255, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 140px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 16px;
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            box-shadow: 0 8px 24px rgba(108, 99, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-submit::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.5s;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(108, 99, 255, 0.4);
+        }
+
+        .form-submit:hover::before {
+            transform: translateX(100%);
+        }
+
+        .form-submit:active {
+            transform: translateY(-1px);
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
+            color: var(--text-dark);
+            padding: 80px 40px 30px;
+            border-top: 1px solid rgba(108, 99, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 1000px;
+            height: 500px;
+            background: radial-gradient(circle at center, rgba(255, 77, 141, 0.08), transparent 70%);
+            transform: translateX(-50%);
+            pointer-events: none;
+        }
+
+        .footer-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column {
+            background: var(--glass-bg);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--glass-border);
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-column::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .footer-column:hover {
+            box-shadow: 0 16px 40px rgba(108, 99, 255, 0.12);
+            transform: translateY(-6px);
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .footer-column:hover::before {
+            transform: scaleX(1);
+        }
+
+        .footer-column h4 {
+            color: var(--text-dark);
+            font-weight: 800;
+            margin-bottom: 20px;
+            font-size: 17px;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 14px;
+        }
+
+        .footer-column ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-column ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-secondary);
+            transition: width 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--primary);
+        }
+
+        .footer-column ul li a:hover::after {
+            width: 100%;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(108, 99, 255, 0.15);
+            padding-top: 28px;
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-light);
+            font-size: 15px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: var(--light);
+            border-radius: 8px;
+            border: 1px solid var(--grey-300);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* ===== FLOATING BUTTONS ===== */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #25d366, #20ba5a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+            z-index: 99;
+            animation: pulse 3s infinite;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.15) translateY(-5px);
+            box-shadow: 0 20px 50px rgba(37, 211, 102, 0.5);
+            animation: none;
+        }
+
+        .call-btn {
+            position: fixed;
+            bottom: 170px;
+            right: 30px;
+            width: 64px;
+            height: 64px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 12px 40px rgba(108, 99, 255, 0.3);
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+            z-index: 99;
+        }
+
+        .call-btn:hover {
+            transform: scale(1.15) translateY(-5px);
+            box-shadow: 0 20px 50px rgba(108, 99, 255, 0.5);
+        }
+
+        /* ===== CHATBOT ===== */
+        .chatbot {
+            position: fixed;
+            bottom: 30px;
+            right: 100px;
+            width: 350px;
+            max-height: 500px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+            z-index: 98;
+            opacity: 0;
+            transform: scale(0.8) translateY(20px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .chatbot.active {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+            pointer-events: all;
+        }
+
+        .chatbot-header {
+            background: var(--primary);
+            color: white;
+            padding: 20px;
+            border-radius: 15px 15px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chatbot-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .chatbot-close:hover {
+            transform: rotate(90deg);
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .message {
+            padding: 12px 15px;
+            border-radius: 10px;
+            font-size: 14px;
+            animation: slideInUp 0.3s ease;
+            line-height: 1.45;
+        }
+
+        .typing-indicator {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 10px 12px;
+            background: var(--light);
+            color: var(--text-dark);
+            border-radius: 10px;
+            font-size: 13px;
+            max-width: 70%;
+        }
+
+        .typing-dot {
+            width: 7px;
+            height: 7px;
+            background: var(--primary);
+            border-radius: 50%;
+            animation: blink 1.3s infinite;
+        }
+
+        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+        .chatbot-suggestions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .suggestion-chip {
+            background: var(--light);
+            border: 1px solid var(--grey-300);
+            color: var(--primary);
+            border-radius: 999px;
+            padding: 6px 10px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .suggestion-chip:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        @keyframes blink {
+            0%, 80%, 100% { opacity: 0.1; }
+            40% { opacity: 1; }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message.user {
+            background: var(--primary);
+            color: white;
+            align-self: flex-end;
+            max-width: 80%;
+        }
+
+        .message.bot {
+            background: var(--light);
+            color: var(--text-dark);
+            align-self: flex-start;
+            max-width: 80%;
+        }
+
+        .chatbot-input {
+            display: flex;
+            gap: 10px;
+            padding: 15px;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .chatbot-input input {
+            flex: 1;
+            border: 1px solid var(--grey-300);
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            background: var(--light);
+            color: var(--text-dark);
+        }
+
+        .chatbot-input input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
+            background: white;
+        }
+
+        .chatbot-send {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            width: 40px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .chatbot-send:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .chatbot-toggle {
+            position: fixed;
+            bottom: 30px;
+            right: 100px;
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(108, 99, 255, 0.3);
+            transition: all 0.3s ease;
+            z-index: 97;
+        }
+
+        .contact-popup {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 320px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+            border: 1px solid var(--grey-300);
+            z-index: 200;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.35s ease;
+        }
+
+        .contact-popup.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .popup-content {
+            padding: 16px 18px;
+            text-align: left;
+        }
+
+        .popup-content h3 {
+            margin: 0;
+            font-size: 16px;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+
+        .popup-content p {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 8px;
+            right: 10px;
+            background: transparent;
+            border: none;
+            font-size: 20px;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .popup-action {
+            width: 100%;
+            padding: 10px 0;
+            border: none;
+            border-radius: 8px;
+            background: var(--primary);
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .popup-action:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(108, 99, 255, 0.25);
+        }
+
+        .chatbot-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        .chatbot-toggle.hidden {
+            display: none;
+        }
+
+        /* ===== SCROLL ANIMATION ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 15px 20px;
+            }
+
+            nav {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+                position: absolute;
+                top: 70px;
+                right: 20px;
+                width: calc(100% - 40px);
+                background: rgba(236, 228, 255, 0.95);
+                border: 1px solid rgba(210, 133, 228, 0.26);
+                border-radius: 14px;
+                padding: 14px;
+                box-shadow: 0 16px 36px rgba(28, 5, 69, 0.24);
+                z-index: 105;
+            }
+
+            nav.open {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-buttons a {
+                width: 100%;
+                text-align: center;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .section-header h2 {
+                font-size: 32px;
+            }
+
+            .about-text h3 {
+                font-size: 24px;
+            }
+
+            .whatsapp-btn,
+            .call-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+            }
+
+            .call-btn {
+                bottom: 130px;
+            }
+
+            .chatbot {
+                width: 280px;
+                right: 50px;
+            }
+
+            .chatbot-toggle {
+                right: 50px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .primary-btn,
+            .secondary-btn {
+                padding: 12px 24px;
+                font-size: 14px;
+            }
+
+            .services-grid,
+            .categories-grid,
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- LOADER -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="gradientLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#541F7B;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#DB2777;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="15" y="15" width="70" height="70" rx="15" fill="url(#gradientLogo)"/>
+                    <text x="50" y="60" font-size="48" font-weight="bold" fill="white" text-anchor="middle" font-family="Poppins">SA</text>
+                </svg>
+            </div>
+            <div class="loader-text">Sushant Agnihotri</div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <a href="#home" class="logo" aria-label="Sushant Agnihotri Web Development">
+                <img src="logo/WhatsApp Image 2026-04-03 at 12.06.05.jpeg" alt="WebWithSushant" class="header-logo-img" />
+                <span style="font-size:16px; font-weight:700; line-height:1.1;">WebWithSushant</span>
+            </a>
+            <div class="header-art" aria-hidden="true" title="Brand Icon">
+                <svg width="40" height="40" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#5f2b83" />
+                            <stop offset="100%" stop-color="#ff6393" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="64" cy="64" r="60" fill="url(#iconGrad)" opacity="0.2" />
+                    <path d="M40 38 L88 38 L88 90 L40 38 Z" fill="none" stroke="white" stroke-width="8" stroke-linecap="round" />
+                    <text x="64" y="78" text-anchor="middle" font-family="Poppins" font-size="40" fill="white" font-weight="800">S</text>
+                </svg>
+            </div>
+            <nav id="navbar">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-status"><span>🛡️ 50+ Projects • Noida Sector 45 • 24/7 Support</span></div>
+            <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Started</button>
+            <button class="menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>I Build Websites That Grow Your Business Online</h1>
+            <p id="typed-text" class="typewriter-text">Affordable, modern, and high-converting websites for local businesses and startups.</p>
+            <div class="hero-buttons">
+                <button class="primary-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Your Website Now</button>
+                <button class="secondary-btn" onclick="whatsappChat('I want to know more about your services')">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about fade-in" id="about">
+        <div class="section-header">
+            <h2>About Me</h2>
+            <p>Learn who I am and what I can do for your business</p>
+        </div>
+        <div class="about-container">
+            <div class="about-text">
+                <h3>Hi, I'm Sushant Agnihotri</h3>
+                <p>I'm a professional web developer with 2+ years of experience building beautiful, responsive, and high-converting websites for businesses across India.</p>
+                <p>My mission is to help local businesses, shop owners, gyms, coaching institutes, and clinics establish a strong online presence without breaking the bank.</p>
+                <p>I specialize in creating modern, fast-loading websites that are optimized for search engines and designed to convert visitors into customers.</p>
+                <div class="about-stats">
+                    <div class="stat-box fade-in">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-box fade-in">
+                        <div class="stat-number">45+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-box fade-in">
+                        <div class="stat-number">2+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-box fade-in">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Satisfaction Rate</div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image fade-in">
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0.3" />
+                            <stop offset="100%" style="stop-color:#DB2777;stop-opacity:0.3" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="200" cy="200" r="180" fill="url(#grad1)"/>
+                    <rect x="80" y="100" width="240" height="200" rx="20" fill="#8B5CF6" opacity="0.3"/>
+                    <circle cx="120" cy="140" r="30" fill="#DB2777" opacity="0.4"/>
+                    <rect x="160" y="150" width="150" height="10" rx="5" fill="#DB2777" opacity="0.3"/>
+                    <rect x="160" y="170" width="120" height="10" rx="5" fill="#DB2777" opacity="0.3"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services" id="services">
+        <div class="services-container">
+            <div class="section-header">
+                <h2>Services I Offer</h2>
+                <p>Complete web solutions tailored to your business needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Website Design & Development</h3>
+                    <p>Modern, responsive websites built with latest technologies. Fast loading, SEO-optimized, and designed for conversions.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile-First Approach</h3>
+                    <p>100% mobile responsive websites that look perfect on all devices. Your customers can reach you anytime, anywhere.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>SEO Optimization</h3>
+                    <p>Optimize your website for Google search. Get found by customers looking for your services in your area.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <h3>Website Maintenance</h3>
+                    <p>Keep your website running smoothly with regular updates, backups, and security checks included.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>E-Commerce Solutions</h3>
+                    <p>Sell products/services online with an integrated shopping cart, payment gateway, and order management system.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Custom Design</h3>
+                    <p>Unique, custom-designed websites that match your brand identity and stand out from competitors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BUSINESS CATEGORIES SECTION -->
+    <section class="categories" id="categories">
+        <div class="section-header">
+            <h2>Who I Help</h2>
+            <p>Websites designed specifically for your industry</p>
+        </div>
+        <div class="categories-grid">
+            <div class="category-card fade-in">
+                <div class="category-icon">💪</div>
+                <h3>Gym & Fitness</h3>
+                <p>Membership booking, class schedules, trainer profiles, and membership payments online</p>
+            </div>
+            <div class="category-card fade-in">
+                <div class="category-icon">📚</div>
+                <h3>Coaching Institutes</h3>
+                <p>Course information, student enrollment, online payment, and progress tracking</p>
+            </div>
+            <div class="category-card fade-in">
+                <div class="category-icon">⚕️</div>
+                <h3>Clinic & Hospital</h3>
+                <p>Appointment booking, doctor profiles, medical services, and patient testimonials</p>
+            </div>
+            <div class="category-card fade-in">
+                <div class="category-icon">🛍️</div>
+                <h3>Shops & Retail</h3>
+                <p>Product catalog, online ordering, local delivery integration, and customer reviews</p>
+            </div>
+            <div class="category-card fade-in">
+                <div class="category-icon">🏢</div>
+                <h3>Startups</h3>
+                <p>Professional portfolio, investor-ready design, product showcase, and investor contact</p>
+            </div>
+            <div class="category-card fade-in">
+                <div class="category-icon">🤝</div>
+                <h3>Service Businesses</h3>
+                <p>Service details, pricing, booking system, before-after galleries, and client reviews</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio-container">
+            <div class="section-header">
+                <h2>Recent Projects</h2>
+                <p>See what I've created for my satisfied clients</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card fade-in">
+                    <div class="portfolio-image">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>FitLife Gym</h3>
+                        <p>Modern gym website with membership booking, class schedules, and trainer profiles.</p>
+                        <span class="portfolio-tag">Design</span>
+                        <span class="portfolio-tag">Development</span>
+                    </div>
+                </div>
+                <div class="portfolio-card fade-in">
+                    <div class="portfolio-image">
+                        <i class="fas fa-clinic-medical"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Care Medical Clinic</h3>
+                        <p>Health clinic website with appointment booking, doctor profiles, and online consultation.</p>
+                        <span class="portfolio-tag">Responsive</span>
+                        <span class="portfolio-tag">E-Commerce</span>
+                    </div>
+                </div>
+                <div class="portfolio-card fade-in">
+                    <div class="portfolio-image">
+                        <i class="fas fa-books"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>EduMaster Coaching</h3>
+                        <p>Educational institute website with course listings, student enrollment, and payment integration.</p>
+                        <span class="portfolio-tag">SEO</span>
+                        <span class="portfolio-tag">Mobile-First</span>
+                    </div>
+                </div>
+                <div class="portfolio-card fade-in">
+                    <div class="portfolio-image">
+                        <i class="fas fa-shopping-bags"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Retail Store Online</h3>
+                        <p>E-commerce website with product catalog, shopping cart, and secure payment gateway.</p>
+                        <span class="portfolio-tag">E-Commerce</span>
+                        <span class="portfolio-tag">SEO</span>
+                    </div>
+                </div>
+                <div class="portfolio-card fade-in">
+                    <div class="portfolio-image">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>TechStart Startup</h3>
+                        <p>Launch-ready website for a tech startup with investor information and product showcase.</p>
+                        <span class="portfolio-tag">Design</span>
+                        <span class="portfolio-tag">Strategy</span>
+                    </div>
+                </div>
+                <div class="portfolio-card fade-in">
+                    <div class="portfolio-image">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Home Services Pro</h3>
+                        <p>Service-based website with booking system, service gallery, and customer reviews.</p>
+                        <span class="portfolio-tag">Responsive</span>
+                        <span class="portfolio-tag">SEO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE ME SECTION -->
+    <section class="why-choose fade-in" id="why-choose">
+        <div class="section-header">
+            <h2>Why Choose Me?</h2>
+            <p>Here's what makes me different</p>
+        </div>
+        <div class="why-grid">
+            <div class="why-features">
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Affordable Pricing</h4>
+                        <p>Quality websites at prices that small business owners can actually afford.</p>
+                    </div>
+                </div>
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Fast & Optimized</h4>
+                        <p>Lightning-fast websites that load in seconds and rank high on Google.</p>
+                    </div>
+                </div>
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Mobile Perfect</h4>
+                        <p>100% responsive design that looks stunning on all devices and screen sizes.</p>
+                    </div>
+                </div>
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>24/7 Support</h4>
+                        <p>Always here to help! Quick response times and dedicated customer support.</p>
+                    </div>
+                </div>
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Growth Focused</h4>
+                        <p>Websites designed to convert visitors into customers and grow your business.</p>
+                    </div>
+                </div>
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Secure & Safe</h4>
+                        <p>SSL certificates, security updates, and regular backups included.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="why-image fade-in">
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0.2" />
+                            <stop offset="100%" style="stop-color:#DB2777;stop-opacity:0.2" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="200" cy="200" r="180" fill="url(#grad2)"/>
+                    <g transform="translate(200, 200)">
+                        <circle cx="0" cy="0" r="120" fill="none" stroke="#8B5CF6" stroke-width="2" opacity="0.3"/>
+                        <circle cx="0" cy="0" r="90" fill="none" stroke="#DB2777" stroke-width="2" opacity="0.3"/>
+                        <circle cx="0" cy="0" r="60" fill="none" stroke="#541F7B" stroke-width="2" opacity="0.5"/>
+                        <circle cx="0" cy="-80" r="15" fill="#8B5CF6"/>
+                        <circle cx="57" cy="57" r="15" fill="#DB2777"/>
+                        <circle cx="70" cy="0" r="15" fill="#541F7B"/>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials">
+        <div class="testimonials-container">
+            <div class="section-header">
+                <h2>What Clients Say</h2>
+                <p>Real feedback from happy business owners</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Sushant built my gym website and it's been a game changer. More members are booking online now. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AK</div>
+                        <div class="author-info">
+                            <h4>Amit Kumar</h4>
+                            <p>FitLife Gym Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The website he created for my clinic looks professional and helps me manage appointments better. Great service!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DR</div>
+                        <div class="author-info">
+                            <h4>Dr. Rajesh</h4>
+                            <p>Medical Clinic Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Best decision for my coaching institute. Student enrollment increased by 40% after the new website launched!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PR</div>
+                        <div class="author-info">
+                            <h4>Priya Sharma</h4>
+                            <p>Coaching Institute Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"My online store is now live and getting orders daily. Sushant's support team is responsive and helpful!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MJ</div>
+                        <div class="author-info">
+                            <h4>Mohan Joshi</h4>
+                            <p>E-Commerce Shop Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Affordable, professional, and delivered on time. Couldn't ask for better. Would definitely recommend!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">NK</div>
+                        <div class="author-info">
+                            <h4>Neha Kapoor</h4>
+                            <p>Retail Store Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"His expertise in SEO helped my website rank on the first page of Google. Amazing results!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">VK</div>
+                        <div class="author-info">
+                            <h4>Vikram Singh</h4>
+                            <p>Service Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2>Get Your Website Today</h2>
+                <p>Let's discuss your project and create something amazing together</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Call Me</h3>
+                            <p>Get immediate response on my phone</p>
+                            <a href="tel:+917607425821">+91 7607425821</a>
+                        </div>
+                    </div>
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h3>WhatsApp Chat</h3>
+                            <p>Message me directly on WhatsApp</p>
+                            <a href="https://wa.me/917607425821" target="_blank">Chat Now</a>
+                        </div>
+                    </div>
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email Me</h3>
+                            <p>Send detailed project information</p>
+                            <a href="mailto:sushantshreeharivanshi@gmail.com">sushantshreeharivanshi@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Based in India, serving clients nationwide</p>
+                            <p>Noida Sector 45, Uttar Pradesh</p>
+                        </div>
+                    </div>
+                    <div class="contact-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.4595806320914!2d77.42211707516741!3d28.576995682413673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce606d0be321d%3A0x28e7b6f7bbd9efda!2sSector%2045%2C%20Noida%2C%20Uttar%20Pradesh%20120103!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="contact-form fade-in">
+                    <h3>Send Me a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+91 XXXXXXXXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="business">Business Type</label>
+                            <input type="text" id="business" name="business" placeholder="e.g., Gym, Coaching, Clinic, Shop">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Tell me about your project</label>
+                            <textarea id="message" name="message" placeholder="Describe what you need..." required></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT POPUP -->
+    <div class="contact-popup" id="contactPopup">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closeContactPopup()">&times;</button>
+            <h3>Instant Website Help</h3>
+            <p>Get a fast callback for your business website in 10 minutes. We can start right away!</p>
+            <button class="popup-action" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); closeContactPopup();">Contact Now</button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>About Me</h4>
+                    <p>I'm Sushant Agnihotri, a professional web developer helping local businesses establish their online presence with affordable, modern websites.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/sushant" target="_blank" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/sushant" target="_blank" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/sushant" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://instagram.com/sushant" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Website Design</a></li>
+                        <li><a href="#services">E-Commerce</a></li>
+                        <li><a href="#services">SEO Optimization</a></li>
+                        <li><a href="#services">Mobile Development</a></li>
+                        <li><a href="#services">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><strong>Phone:</strong> <a href="tel:+917607425821">+91 7607425821</a></li>
+                        <li><strong>Email:</strong> <a href="mailto:sushantshreeharivanshi@gmail.com">sushantshreeharivanshi@gmail.com</a></li>
+                        <li><strong>Location:</strong> India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sushant Agnihotri. All rights reserved. | Designed & Developed with ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING BUTTONS -->
+    <a href="https://wa.me/917607425821" target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <a href="tel:+917607425821" class="call-btn" title="Call Now">
+        <i class="fas fa-phone"></i>
+    </a>
+
+    <!-- CHATBOT TOGGLE -->
+    <button class="chatbot-toggle" onclick="toggleChatbot()" title="Chat with AI">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- CHATBOT -->
+    <div class="chatbot" id="chatbot">
+        <div class="chatbot-header">
+            <h4>AI Assistant</h4>
+            <button class="chatbot-close" onclick="toggleChatbot()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chatbot-messages" id="chatMessages">
+            <div class="message bot">
+                Hi! 👋 I'm Sushant's AI Assistant. How can I help you today?
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleChatInput(event)">
+            <button class="chatbot-send" onclick="sendChatMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // ===== INITIALIZATION =====
+        document.addEventListener('DOMContentLoaded', function() {
+            setupScrollAnimations();
+            setupNavigation();
+            setupFormSubmission();
+            setupChatbot();
+        });
+
+        // ===== SCROLL ANIMATIONS =====
+        function setupScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.2,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // ===== NAVIGATION =====
+        function setupNavigation() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            window.addEventListener('scroll', () => {
+                let current = '';
+                const sections = ['home', 'about', 'services', 'portfolio', 'contact'];
+                
+                sections.forEach(sectionId => {
+                    const section = document.getElementById(sectionId);
+                    if (section && section.offsetTop <= window.scrollY + 100) {
+                        current = sectionId;
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        }
+
+        // ===== MOBILE MENU =====
+        function toggleMobileMenu() {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('open');
+        }
+
+        // ===== CONTACT FORM =====
+        function setupFormSubmission() {
+            const form = document.getElementById('contactForm');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    business: document.getElementById('business').value,
+                    message: document.getElementById('message').value
+                };
+
+                // Create email body
+                const emailBody = `
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Business Type: ${formData.business}
+
+Message:
+${formData.message}
+                `;
+
+                // Open email client
+                window.location.href = `mailto:sushantshreeharivanshi@gmail.com?subject=Website Inquiry from ${formData.name}&body=${encodeURIComponent(emailBody)}`;
+
+                // Reset form
+                form.reset();
+                alert('Thank you! Opening your email client to send the message.');
+            });
+        }
+
+        // ===== WHATSAPP CHAT =====
+        function whatsappChat(message) {
+            const phoneNumber = '917607425821';
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+
+        // ===== CHATBOT FUNCTIONALITY =====
+        const chatbotResponses = {
+            'services': 'I offer website design, development, SEO optimization, e-commerce solutions, and website maintenance. What service are you interested in?',
+            'price': 'Prices vary based on your requirements. I offer affordable solutions starting from basic websites to complex e-commerce platforms. Let\'s discuss your project for a custom quote!',
+            'contact': 'You can reach me at +91 7607425821 or sushantshreeharivanshi@gmail.com. WhatsApp is also available!',
+            'portfolio': 'I\'ve completed 50+ projects for gyms, clinics, coaching institutes, shops, and startups. We can discuss specific examples of your interest.',
+            'time': 'Project timeline depends on complexity. Simple websites take 2-3 weeks, while complex projects may take longer. We\'ll discuss timelines in detail.',
+            'experience': 'I have 2+ years of professional web development experience with 45+ satisfied clients.',
+            'hello': 'Hello! 👋 How can I assist you with your website project today?',
+            'hi': 'Hi there! 👋 What can I help you with?',
+            'help': 'I can help you with information about my services, pricing, portfolio, and how to get started. What would you like to know?'
+        };
+
+        function setupChatbot() {
+            setTimeout(() => {
+                addChatMessage('Hello! 👋 I am the ultra assistant for WebWithSushant. Ask anything about websites, business growth, or project pricing.', 'bot');
+                addChatSuggestions(['Services', 'Affordable Plan', 'Portfolio', 'SEO', 'Quick Quote']);
+            }, 300);
+        }
+
+        function addChatSuggestions(options) {
+            const messagesContainer = document.getElementById('chatMessages');
+            const suggestionBox = document.createElement('div');
+            suggestionBox.className = 'chatbot-suggestions';
+
+            options.forEach(option => {
+                const chip = document.createElement('button');
+                chip.className = 'suggestion-chip';
+                chip.textContent = option;
+                chip.onclick = () => {
+                    addChatMessage(option, 'user');
+                    processChatQuestion(option);
+                };
+                suggestionBox.appendChild(chip);
+            });
+
+            messagesContainer.appendChild(suggestionBox);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function toggleChatbot() {
+            const chatbot = document.getElementById('chatbot');
+            chatbot.classList.toggle('active');
+
+            if (chatbot.classList.contains('active')) {
+                document.getElementById('chatInput').focus();
+            }
+        }
+
+        function sendChatMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+
+            if (message === '') return;
+
+            addChatMessage(message, 'user');
+            input.value = '';
+            showTypingIndicator();
+
+            setTimeout(() => {
+                removeTypingIndicator();
+                processChatQuestion(message);
+            }, 700);
+        }
+
+        function processChatQuestion(message) {
+            const response = getBotResponse(message);
+            addChatMessage(response, 'bot');
+
+            if (message.toLowerCase().includes('services') || message.toLowerCase().includes('seo') || message.toLowerCase().includes('portfolio') || message.toLowerCase().includes('quote')) {
+                addChatSuggestions(['Get quote', 'See prices', 'Schedule a call', 'Start now']);
+            }
+        }
+
+        function showTypingIndicator() {
+            const container = document.getElementById('chatMessages');
+            const typing = document.createElement('div');
+            typing.className = 'typing-indicator';
+            typing.id = 'typingIndicator';
+            typing.innerHTML = '<span>Assistant is typing</span><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';
+            container.appendChild(typing);
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function removeTypingIndicator() {
+            const typing = document.getElementById('typingIndicator');
+            if (typing) typing.remove();
+        }
+
+
+        function addChatMessage(message, sender) {
+            const messagesContainer = document.getElementById('chatMessages');
+            const messageEl = document.createElement('div');
+            messageEl.className = `message ${sender}`;
+            messageEl.textContent = message;
+            messagesContainer.appendChild(messageEl);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function getBotResponse(userMessage) {
+            const msg = userMessage.toLowerCase();
+
+            for (const key in chatbotResponses) {
+                if (msg.includes(key)) {
+                    return chatbotResponses[key];
+                }
+            }
+
+            if (msg.includes('website')) {
+                return 'I build premium websites that load fast, rank high, and convert leads. To begin, please share your business type and goals.';
+            } else if (msg.includes('design')) {
+                return 'My websites have clean, modern UX and bespoke branding. I can send you a ready concept in 24 hours after requirements.';
+            } else if (msg.includes('cost') || msg.includes('price') || msg.includes('budget')) {
+                return 'Affordable plans start at ₹8,499 for local business landing pages. Custom solutions are quoted after review. Want a free estimate?';
+            } else if (msg.includes('seo') || msg.includes('rank') || msg.includes('search')) {
+                return 'Yes, SEO is built in. I provide on-page SEO, schema, page-speed optimization, and local listing support.';
+            } else if (msg.includes('portfolio') || msg.includes('projects')) {
+                return 'Check the Portfolio section on this page (recent clients in gyms, clinics, stores). Need an exact sample for your niche? Let me know!';
+            } else if (msg.includes('contact') || msg.includes('call')) {
+                return 'Reach out anytime at +91 7607425821, or email sushantshreeharivanshi@gmail.com. I can call you back this hour if you share your number.';
+            } else if (msg.includes('thank') || msg.includes('great') || msg.includes('helpful')) {
+                return 'Thanks! I am here 24/7 for your business website success. Want to start with a quick quote now?';
+            } else {
+                return 'That is a great question! I can help with technical, design, pricing, & SEO strategy. Please share your business type (gym/clinic/shop/etc.) so I can give a tailored answer.';
+            }
+        }
+
+        function handleChatInput(event) {
+            if (event.key === 'Enter') {
+                sendChatMessage();
+            }
+        }
+
+        function openContactPopup() {
+            const popup = document.getElementById('contactPopup');
+            if (!popup.classList.contains('active')) {
+                popup.classList.add('active');
+            }
+        }
+
+        function closeContactPopup() {
+            const popup = document.getElementById('contactPopup');
+            popup.classList.remove('active');
+        }
+
+        function startTypewriter() {
+            const phrases = [
+                'Affordable, modern, and high-converting websites for local businesses.',
+                'Custom websites for gyms, coaching centers, clinics, shops, startups.',
+                'Fast, clean, and premium website design that turns visitors into customers.'
+            ];
+            let i = 0;
+            let j = 0;
+            let currentText = '';
+            let isDeleting = false;
+            const typedElement = document.getElementById('typed-text');
+
+            function type() {
+                const fullText = phrases[i];
+                if (isDeleting) {
+                    currentText = fullText.substring(0, j - 1);
+                    j--;
+                } else {
+                    currentText = fullText.substring(0, j + 1);
+                    j++;
+                }
+
+                typedElement.textContent = currentText;
+                let speed = isDeleting ? 40 : 90;
+
+                if (!isDeleting && currentText === fullText) {
+                    speed = 1400;
+                    isDeleting = true;
+                } else if (isDeleting && currentText === '') {
+                    isDeleting = false;
+                    i = (i + 1) % phrases.length;
+                    speed = 260;
+                }
+
+                setTimeout(type, speed);
+            }
+
+            type();
+        }
+
+        window.addEventListener('load', () => {
+            setTimeout(openContactPopup, 3000);
+            startTypewriter();
+        });
+
+        // ===== SMOOTH SCROLL =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // contact popup auto open after 3 seconds
+        let contactPopupOpened = false;
+        function openContactPopup() {
+            const popup = document.getElementById('contactPopup');
+            if (!popup) return;
+            popup.classList.add('active');
+            contactPopupOpened = true;
+        }
+
+        function closeContactPopup() {
+            const popup = document.getElementById('contactPopup');
+            if (!popup) return;
+            popup.classList.remove('active');
+        }
+
+        setTimeout(() => {
+            if (!contactPopupOpened) openContactPopup();
+        }, 3000);
+
+        // typewriter effect
+        const typewriterTexts = [
+            'Affordable, modern, and high-converting website design.',
+            'Ultra premium websites for gyms, clinics, coaching, and stores.',
+            'SEO friendly, mobile first, and conversion optimized.',
+            'Built for local business growth in Noida Sector 45 and beyond.'
+        ];
+        let indexType = 0;
+        let charIndex = 0;
+
+        function updateTypewriter() {
+            const target = document.getElementById('typed-text');
+            if (!target) return;
+            const current = typewriterTexts[indexType];
+            if (charIndex <= current.length) {
+                target.textContent = current.substring(0, charIndex);
+                charIndex++;
+                setTimeout(updateTypewriter, 40);
+            } else {
+                setTimeout(() => {
+                    charIndex = 0;
+                    indexType = (indexType + 1) % typewriterTexts.length;
+                    updateTypewriter();
+                }, 2200);
+            }
+        }
+
+        updateTypewriter();
+    </script>
+</body>
+</html>
+ 
